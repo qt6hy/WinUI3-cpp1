@@ -31,4 +31,15 @@ namespace winrt::WinUI3_cpp1::implementation
     {
         myButton().Content(box_value(L"Clicked"));
     }
+
+    void MainWindow::myAppBarButton_Click(IInspectable const&, RoutedEventArgs const&)
+    {
+        myAppBarButton().Label(L"イイネ");
+    }
+
+    void MainWindow::mySendMail_Click(IInspectable const&, RoutedEventArgs const&)
+    {
+        mySendMail().Text(L"Sended!");
+    }
+
 }

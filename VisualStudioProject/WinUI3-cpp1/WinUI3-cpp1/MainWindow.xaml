@@ -7,7 +7,44 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+    <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
         <Button x:Name="myButton" Click="myButton_Click">Click Me</Button>
+        <ColorPicker
+              ColorSpectrumShape="Ring"
+              IsMoreButtonVisible="True"
+              IsColorSliderVisible="True"
+              IsColorChannelTextInputVisible="True"
+              IsHexInputVisible="True"
+              IsAlphaEnabled="False"
+              IsAlphaSliderVisible="True"
+              IsAlphaTextInputVisible="True" />
+        <ToggleSwitch>トグルボタン</ToggleSwitch>
+        <DropDownButton AutomationProperties.Name="Email">
+            <DropDownButton.Content>
+                <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE715;"/>
+            </DropDownButton.Content>
+            <DropDownButton.Flyout>
+                <MenuFlyout Placement="Bottom">
+                    <MenuFlyoutItem x:Name="mySendMail" Text="Send" Click="mySendMail_Click">
+                        <MenuFlyoutItem.Icon>
+                            <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE725;"/>
+                        </MenuFlyoutItem.Icon>
+                    </MenuFlyoutItem>
+                    <MenuFlyoutItem Text="Reply">
+                        <MenuFlyoutItem.Icon>
+                            <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE8CA;"/>
+                        </MenuFlyoutItem.Icon>
+                    </MenuFlyoutItem>
+                    <MenuFlyoutItem Text="Reply All">
+                        <MenuFlyoutItem.Icon>
+                            <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE8C2;"/>
+                        </MenuFlyoutItem.Icon>
+                    </MenuFlyoutItem>
+                </MenuFlyout>
+            </DropDownButton.Flyout>
+        </DropDownButton>
+        <AppBarButton x:Name="myAppBarButton" Icon="Like" Label="シンボルボタン" Click="myAppBarButton_Click"/>
+        <RatingControl AutomationProperties.Name="Simple RatingControl" IsClearEnabled="True" IsReadOnly="False" />
+
     </StackPanel>
 </Window>
